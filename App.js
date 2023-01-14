@@ -1,40 +1,36 @@
 import { StatusBar } from 'expo-status-bar';
+import React from 'react'
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
 import { StyleSheet, Text, View, Button } from 'react-native';
+
+import Chat from "./screens/Chat.js"
+import Login from "./screens/Login.js"
+import Signup from './screens/Ssignup.js';
+import Home from './screens/Home.js'
+
+const Stack = createStackNavigator();
+
+function ChatStack() {
+  return(
+    <Stack.Navigator screenOptions={{headerShown: false}}>
+      <Stack.Screen name="Home" component={Home} />
+    </Stack.Navigator>
+  )
+}
+
+function RootNavigator() {
+  return(
+    <NavigationContainer>
+      <ChatStack/>
+    </NavigationContainer>
+  )
+}
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <Text>Hello hasan wellcome back to react native project</Text>
-      {/* <Button>Hello</Button> */}
-      <StatusBar style="auto" />
-      <View style={styles.box}>
-        <Text style={styles.whiteText}>this is view inside of view</Text>
-      </View>
-    </View>
+    <RootNavigator/>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#FAFAFA ',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  box:{
-    flex: 1,
-    backgroundColor: '#E16A3D',
-    textColor: '#FAFAFA',
-    alignItems: 'center',
-    justifyContent: 'center',
-    paddingRight: 5,
-    paddingLeft: 5,
-    borderRadius: 30,
-    maxHeight: 50,
-    maxWidth: 300
-  },
-  whiteText: {
-    color: '#FAFAFA'
-  }
-});
+
