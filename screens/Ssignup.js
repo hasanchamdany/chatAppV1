@@ -53,7 +53,7 @@ export default function Signup({navigation}) {
                 onChangeText={(text) => setPassword(text)}
               />
               <TouchableOpacity style={styles.button} onPress={onHandleSignup}>
-                <Text style={{fontWeight: "bold", color: "#fff", fontSize: 20}}>Log In</Text>
+                <Text style={{fontWeight: "bold", color: "#fff", fontSize: 20}}>SignUp</Text>
               </TouchableOpacity>
               <View style={{marginTop: 20, flexDirection: 'row', alignItems: 'center', alignSelf: 'center'}}>
                 <Text style={{color: 'grey', fontWeight: "600",  fontSize: 14}}>Already have an account ? </Text>

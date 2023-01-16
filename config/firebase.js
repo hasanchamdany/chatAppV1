@@ -1,26 +1,25 @@
-// Import the functions you need from the SDKs you need
-import { initializeApp } from "firebase/app";
-import {getAuth} from 'firebase/auth';
-import {getFirestore} from 'firebase/firestore';
-import { getAnalytics } from "firebase/analytics";
-
-import Constants from 'expo-constants'
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
-
-// Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+import { initializeApp } from 'firebase/app';
+import { getAuth } from 'firebase/auth';
+import { getFirestore } from 'firebase/firestore';
+import Constants from 'expo-constants';
+// Firebase config
 const firebaseConfig = {
-  apiKey: Constants.manifest.extra.apiKey,
-  authDomain: Constants.manifest.extra.authDomain,
-  projectId: Constants.manifest.extra.projectId,
-  storageBucket: Constants.manifest.extra.storageBucket,
-  messagingSenderId: Constants.manifest.extra.messagingSenderId,
-  appId: Constants.manifest.extra.appId,
-  databaseURL: Constants.manifest.extra.databaseURL
+  // apiKey: Constants.manifest.extra.apiKey,
+  // authDomain: Constants.manifest.extra.authDomain,
+  // projectId: Constants.manifest.extra.projectId,
+  // storageBucket: Constants.manifest.extra.storageBucket,
+  // messagingSenderId: Constants.manifest.extra.messagingSenderId,
+  // appId: Constants.manifest.extra.appId,
+  // databaseURL: Constants.manifest.extra.databaseURL
+  apiKey: "AIzaSyBQDRYd3KU0yPN5-BnlVG9HD8xqjAyajUk",
+  authDomain: "chatappv1-8a7c1.firebaseapp.com",
+  projectId: "chatappv1-8a7c1",
+  storageBucket: "chatappv1-8a7c1.appspot.com",
+  messagingSenderId: "263246682787",
+  appId: "1:263246682787:web:b955f763863ac20b2afd16",
+  measurementId: "G-ZCX05F3R52"
 };
-
-// Initialize Firebase
+// initialize firebase
 initializeApp(firebaseConfig);
 export const auth = getAuth();
 export const database = getFirestore();
