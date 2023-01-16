@@ -3,6 +3,7 @@ import { getAuth } from 'firebase/auth';
 import { getFirestore } from 'firebase/firestore';
 import * as Expo from 'expo'
 import Constants from 'expo-constants';
+import 'dotenv/config';
 // Firebase config
 const firebaseConfig = {
   // apiKey: Constants.manifest.extra.apiKey,
